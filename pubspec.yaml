@@ -11,6 +11,15 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
   flutter: ">=2.2.3"
 
+dependency_overrides:
+  # Can be removed when
+  # https://github.com/creativecreatorormaybenot/wakelock/pull/203 is merged.
+  wakelock_windows:
+    git:
+      url: https://github.com/timsneath/wakelock
+      ref: win32-v5
+      path: wakelock_windows
+
 dependencies:
   flutter:
     sdk: flutter
@@ -24,7 +33,7 @@ dependencies:
   xml: ^6.1.0
 
 dev_dependencies:
-  lint: ^1.10.0
+  lint: ^2.1.2
   flutter_test:
     sdk: flutter
   flutter_localizations:
